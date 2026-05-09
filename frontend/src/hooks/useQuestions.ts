@@ -24,7 +24,7 @@ export function useQuestionsByCategory(slug: string) {
   return { questions, category, total, loading, error };
 }
 
-export function useSearch(query: string) {
+export function useSearch() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
