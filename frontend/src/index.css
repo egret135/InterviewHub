@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg-primary: #f8fafc;
+  --color-bg-panel: #ffffff;
+  --color-bg-code: #f1f5f9;
+  --color-accent: #0891b2;
+  --color-accent-dim: rgba(8, 145, 178, 0.08);
+  --color-accent-glow: rgba(8, 145, 178, 0.04);
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-border-hover: #0891b2;
+  --color-difficulty-easy: #16a34a;
+  --color-difficulty-medium: #d97706;
+  --color-difficulty-hard: #dc2626;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre { font-family: var(--font-mono); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--color-text-muted); border-radius: 3px; }
+
+.card {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+/* ---- prose 微调 ---- */
+.prose {
+  --tw-prose-body: var(--color-text-secondary);
+  --tw-prose-headings: var(--color-text-primary);
+  --tw-prose-bold: var(--color-text-primary);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-code: #0e7490;
+  --tw-prose-pre-bg: #f8fafc;
+  --tw-prose-quote-borders: var(--color-accent);
+  max-width: none;
+}
+.prose h2 { border-left: 3px solid var(--color-accent); padding-left: 0.75rem; }
+.prose pre { padding: 0; background: none; border: none; }
+.prose code::before, .prose code::after { content: none; }
+.prose :not(pre) > code {
+  background: var(--color-accent-dim);
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.85em;
+}

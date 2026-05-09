@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+backend/tools/scraper/node_modules/
+
+# Build output
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+.logs/
+*.log
+
+# Environment
+.env
+.env.local
+backend/configs/config.yaml
+
+# Go
+backend/tmp/
+backend/answer-bot
+
+# Scraped data
+resource-01/page.html
+resource-01/result.json
+resource-01/screenshot.png
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Scraper output
+tools/scraper/deepseek_output/
