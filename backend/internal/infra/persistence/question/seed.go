@@ -31,8 +31,7 @@ var categoryConfigs = []struct {
 	{"关键三方库应用", "third-party-libs", "go-redis、sarama (Kafka)、gorm 实战", "package", `四、关键三方库应用`},
 	{"MySQL 数据库与分库分表", "mysql-sharding", "索引优化、慢查询、分库分表、读写分离", "database", `五、MySQL 数据库与分库分表`},
 	{"分布式系统与中间件", "distributed-systems", "Nacos、Kafka/RocketMQ、Redis 分布式锁", "globe", `六、分布式系统与中间件`},
-	{"Java 基础与跨语言理解", "java-basics", "看懂 Java 代码、Spring Boot 基础、JVM 分析", "coffee", `七、Java 基础与跨语言理解`},
-	{"领域经验与场景设计", "domain-scenarios", "智能客服、工单系统、消息投递架构设计", "briefcase", `八、领域经验与场景设计`},
+	{"领域经验与场景设计", "domain-scenarios", "智能客服、工单系统、消息投递架构设计", "briefcase", `七、领域经验与场景设计`},
 }
 
 func ImportFromFile(db *gorm.DB, filePath string) error {
